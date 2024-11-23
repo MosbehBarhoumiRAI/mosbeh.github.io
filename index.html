@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mosbeh Barhoumi - MLOps Engineer</title>
+    <meta name="description" content="Portfolio of Mosbeh Barhoumi, MLOps Engineer specializing in AI and Machine Learning.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -193,6 +194,7 @@
             color: var(--primary);
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -201,6 +203,24 @@
             .nav-links {
                 display: none;
             }
+
+            .nav-toggle {
+                display: block;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 4rem;
+                right: 0;
+                background: var(--background);
+                width: 100%;
+                padding: 1rem;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
         }
     </style>
 </head>
@@ -208,7 +228,10 @@
     <header class="header">
         <nav class="nav container">
             <div class="logo">MB</div>
-            <div class="nav-links">
+            <div class="nav-toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links" id="nav-links">
                 <a href="#home">Home</a>
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
@@ -308,6 +331,12 @@
                     behavior: 'smooth'
                 });
             });
+        });
+
+        // Mobile navigation toggle
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
         });
     </script>
 </body>
