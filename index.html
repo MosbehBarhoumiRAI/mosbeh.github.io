@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mosbeh Barhoumi - Portfolio</title>
+    <title>Mosbeh Barhoumi - MLOps Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Reset and base styles */
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --text: #1f2937;
+            --light: #f3f4f6;
+            --background: #ffffff;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -14,29 +21,33 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
+            color: var(--text);
+            background-color: var(--light);
         }
 
-        /* Navigation */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            z-index: 1000;
-            padding: 1rem 2rem;
-        }
-
-        .nav-content {
+        .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        .header {
+            background: var(--background);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 1rem 0;
         }
 
         .nav-links {
@@ -46,24 +57,22 @@
 
         .nav-links a {
             text-decoration: none;
-            color: #333;
+            color: var(--text);
             font-weight: 500;
             transition: color 0.3s;
         }
 
         .nav-links a:hover {
-            color: #007bff;
+            color: var(--primary);
         }
 
-        /* Hero section */
+        /* Hero Section */
         .hero {
             height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0 2rem;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(135deg, var(--background) 0%, var(--light) 100%);
+            padding-top: 4rem;
         }
 
         .hero-content {
@@ -71,82 +80,99 @@
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
+            font-weight: 700;
             margin-bottom: 1rem;
-            color: #2d3436;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .hero p {
             font-size: 1.25rem;
-            color: #636e72;
+            color: var(--text);
             margin-bottom: 2rem;
         }
 
-        /* Projects section */
-        .projects {
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+        .tech-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--background);
+            border-radius: 2rem;
+            margin: 0.25rem;
+            font-size: 0.875rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        .projects h2 {
+        /* Experience Section */
+        .experience {
+            padding: 6rem 0;
+            background: var(--background);
+        }
+
+        .section-title {
             text-align: center;
+            font-size: 2rem;
             margin-bottom: 3rem;
+            color: var(--text);
         }
 
-        .project-grid {
+        .experience-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
-        .project-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
+        .experience-card {
+            background: var(--light);
+            border-radius: 1rem;
+            padding: 2rem;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: transform 0.3s;
         }
 
-        .project-card:hover {
+        .experience-card:hover {
             transform: translateY(-5px);
         }
 
+        .experience-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 6rem 0;
+            background: var(--light);
+        }
+
+        .project-card {
+            background: var(--background);
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
         .project-content {
-            padding: 1.5rem;
+            padding: 2rem;
         }
 
-        /* Skills section */
-        .skills {
-            padding: 4rem 2rem;
-            background-color: white;
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
         }
 
-        .skills-content {
-            max-width: 1200px;
-            margin: 0 auto;
+        .project-links a {
+            color: var(--primary);
+            text-decoration: none;
         }
 
-        .skills h2 {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-        }
-
-        /* Contact section */
+        /* Contact Section */
         .contact {
-            padding: 4rem 2rem;
-            background-color: #f8f9fa;
-        }
-
-        .contact-content {
-            max-width: 600px;
-            margin: 0 auto;
+            padding: 6rem 0;
+            background: var(--background);
             text-align: center;
         }
 
@@ -158,21 +184,20 @@
         }
 
         .social-links a {
-            color: #333;
+            color: var(--text);
             font-size: 1.5rem;
             transition: color 0.3s;
         }
 
         .social-links a:hover {
-            color: #007bff;
+            color: var(--primary);
         }
 
-        /* Responsive design */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
-
+            
             .nav-links {
                 display: none;
             }
@@ -180,114 +205,102 @@
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-content">
+    <header class="header">
+        <nav class="nav container">
             <div class="logo">MB</div>
             <div class="nav-links">
                 <a href="#home">Home</a>
+                <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
                 <a href="#contact">Contact</a>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Mosbeh Barhoumi</h1>
-            <p>Software Engineer & Developer</p>
-            <p>Building elegant solutions to complex problems</p>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Mosbeh Barhoumi</h1>
+                <p>MLOps Engineer | AI Specialist</p>
+                <p>Building and deploying scalable AI solutions with 2+ years of experience in Machine Learning and DevOps.</p>
+                <div class="tech-stack">
+                    <span class="tech-badge">Docker</span>
+                    <span class="tech-badge">Kubernetes</span>
+                    <span class="tech-badge">TensorFlow</span>
+                    <span class="tech-badge">PyTorch</span>
+                    <span class="tech-badge">AWS</span>
+                    <span class="tech-badge">Jenkins</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <h3>MLOps Engineer</h3>
+                    <h4>AVIDEA | 2023 - Present</h4>
+                    <p>Led end-to-end MLOps implementation for automotive AI projects, achieving 30% improvement in deployment efficiency and 95% accuracy in car parts detection.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>AI Research Intern</h3>
+                    <h4>IOVision | 2023</h4>
+                    <p>Pioneered VITON pre-processing pipeline implementation and contributed to the official repository, processing over 100,000 images for virtual try-on.</p>
+                </div>
+                <div class="experience-card">
+                    <h3>AI Intern</h3>
+                    <h4>Takiacademy | 2022</h4>
+                    <p>Developed multilingual chatbot systems using advanced NLP techniques and containerized deployment, reducing inference time by 20%.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="projects" class="projects">
-        <h2>Featured Projects</h2>
-        <div class="project-grid">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
             <div class="project-card">
                 <div class="project-content">
-                    <h3>Project 1</h3>
-                    <p>Description of your first major project goes here.</p>
-                    <div class="tech-stack">
-                        <span>React</span>
-                        <span>Node.js</span>
-                        <span>MongoDB</span>
+                    <h3>VITON Pre-processing Pipeline</h3>
+                    <p>Comprehensive virtual try-on pre-processing system including Dense-pose, Human-parse, and pose-estimation components.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/MosbehBarhoumi/VITON-PRE-PROCESSING" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="project-card">
                 <div class="project-content">
-                    <h3>Project 2</h3>
-                    <p>Description of your second major project goes here.</p>
-                    <div class="tech-stack">
-                        <span>Python</span>
-                        <span>Django</span>
-                        <span>PostgreSQL</span>
+                    <h3>Multilingual Chatbot</h3>
+                    <p>Advanced chatbot system supporting Arabic, English, and French, built with transformer architectures and containerized deployment.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/MosbehBarhoumi/Chatbot" target="_blank">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
                     </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-content">
-                    <h3>Project 3</h3>
-                    <p>Description of your third major project goes here.</p>
-                    <div class="tech-stack">
-                        <span>Vue.js</span>
-                        <span>Firebase</span>
-                        <span>AWS</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="skills">
-        <div class="skills-content">
-            <h2>Skills & Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Frontend</h3>
-                    <ul>
-                        <li>HTML5 & CSS3</li>
-                        <li>JavaScript</li>
-                        <li>React</li>
-                        <li>Vue.js</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <ul>
-                        <li>Node.js</li>
-                        <li>Python</li>
-                        <li>Django</li>
-                        <li>Express</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools & Others</h3>
-                    <ul>
-                        <li>Git</li>
-                        <li>Docker</li>
-                        <li>AWS</li>
-                        <li>CI/CD</li>
-                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact">
-        <div class="contact-content">
-            <h2>Get In Touch</h2>
-            <p>I'm always open to new opportunities and collaborations.</p>
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p>Open to new opportunities and collaborations</p>
             <div class="social-links">
                 <a href="https://github.com/MosbehBarhoumi" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/mosbeh-barhoumi/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://medium.com/@Mosbeh_Barhoumi" target="_blank"><i class="fab fa-medium"></i></a>
+                <a href="mailto:mosbeh.barhoumi.ai@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </section>
 
     <script>
-        // Smooth scrolling for navigation links
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -299,4 +312,3 @@
     </script>
 </body>
 </html>
-
