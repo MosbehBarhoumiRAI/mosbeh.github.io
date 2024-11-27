@@ -322,6 +322,39 @@
                 margin: 0.5rem 0;
             }
         }
+
+        /* About Me Section */
+        .about {
+            padding: 6rem 0;
+            background: var(--background);
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
@@ -333,6 +366,7 @@
             </div>
             <div class="nav-links" id="nav-links">
                 <a href="#home">Home</a>
+                <a href="#about">About Me</a>
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
                 <a href="#education">Education</a>
@@ -356,6 +390,45 @@
                     <span class="tech-badge">Kubernetes</span>
                     <span class="tech-badge">AWS</span>
                     <span class="tech-badge">Jenkins</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Personal Insights</h3>
+                    <p>
+                        I am Mosbeh Barhoumi, an MLOps Engineer with a passion for bridging the gap between data science and operations to deliver production-ready AI systems. With over 2 years of experience in Machine Learning and DevOps, I specialize in developing and deploying AI solutions, automating ML pipelines, and optimizing system performance.
+                    </p>
+                    <p>
+                        My career goals are centered around continuous learning and innovation in the field of AI and MLOps. I am motivated by the challenge of solving complex problems and the opportunity to make a meaningful impact through technology. My values include integrity, collaboration, and a commitment to excellence.
+                    </p>
+                    <h3>Professional Narrative</h3>
+                    <p>
+                        My journey in the tech industry began with a strong foundation in computer science engineering at the National School for Computer Science in Tunisia. During my studies, I developed a keen interest in AI and machine learning, which led me to pursue internships and projects that allowed me to apply these concepts in real-world scenarios.
+                    </p>
+                    <p>
+                        At AVIDEA, I had the opportunity to implement end-to-end MLOps pipelines for automotive AI projects, significantly increasing model deployment efficiency. My role involved not only developing deep learning systems for car parts detection but also designing CI/CD pipelines and orchestrating containerized ML solutions.
+                    </p>
+                    <p>
+                        As an AI Research Intern at IOVision, I conducted extensive research on virtual try-on techniques and contributed to the VITON GitHub repository. This experience honed my skills in deep learning and pre-processing pipelines, allowing me to achieve superior results with the VITON-HR model.
+                    </p>
+                    <p>
+                        At Takiacademy, I fine-tuned neural network architectures for multilingual chatbots, optimizing model performance and reducing inference time. This project showcased my ability to work with diverse technologies and deliver scalable solutions.
+                    </p>
+                    <p>
+                        My certifications, including the Certified Kubernetes Application Developer (CKAD) and TensorFlow Developer Certification, reflect my commitment to staying updated with the latest industry standards and best practices.
+                    </p>
+                    <p>
+                        I am always eager to take on new challenges and collaborate with like-minded professionals to push the boundaries of what AI can achieve. If you are interested in working together or have any questions, feel free to reach out!
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="image.jpeg" alt="Mosbeh Barhoumi">
                 </div>
             </div>
         </div>
