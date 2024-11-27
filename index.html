@@ -355,6 +355,44 @@
                 flex-direction: column;
             }
         }
+
+        /* Blog Section */
+        .blog {
+            padding: 6rem 0;
+            background: var(--light);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-card {
+            background: var(--background);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .blog-card p {
+            margin-bottom: 1rem;
+        }
+
+        .blog-card a {
+            color: var(--primary);
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -371,6 +409,7 @@
                 <a href="#projects">Projects</a>
                 <a href="#education">Education</a>
                 <a href="#achievements">Achievements</a>
+                <a href="#blog">Blog</a>
                 <a href="#contact">Contact</a>
             </div>
         </nav>
@@ -428,7 +467,7 @@
                     </p>
                 </div>
                 <div class="about-image">
-                    <img src="image.jpeg" alt="Mosbeh Barhoumi">
+                    <img src="path/to/your/image.jpg" alt="Mosbeh Barhoumi">
                 </div>
             </div>
         </div>
@@ -441,17 +480,35 @@
                 <div class="experience-card">
                     <h3>MLOps Engineer</h3>
                     <h4>AVIDEA | 2023 - Present</h4>
-                    <p>Led end-to-end MLOps implementation for automotive AI projects, achieving 30% improvement in deployment efficiency and 95% accuracy in car parts detection.</p>
+                    <ul>
+                        <li>Implemented end-to-end MLOps pipelines for automotive AI projects, increasing model deployment efficiency by 30%.</li>
+                        <li>Engineered a deep learning system for car parts detection and damage assessment, achieving 95% accuracy.</li>
+                        <li>Designed CI/CD pipeline with Jenkins, automating testing and deployment for faster release cycles.</li>
+                        <li>Orchestrated containerized ML solutions using Docker and Docker Swarm for improved scalability.</li>
+                        <li>Developed monitoring systems using ELK stack, reducing mean time to resolution for production issues.</li>
+                        <li>Deployed high-performance RESTful APIs with Flask for seamless AI solution integration.</li>
+                        <li>Fine-tuned and deployed 6+ OCR web services for diverse projects, integrating PaddleOCR, Tesseract, and SURYA OCR engines.</li>
+                    </ul>
                 </div>
                 <div class="experience-card">
                     <h3>AI Research Intern</h3>
                     <h4>IOVision | 2023</h4>
-                    <p>Pioneered VITON pre-processing pipeline implementation and contributed to the official repository, processing over 100,000 images for virtual try-on.</p>
+                    <ul>
+                        <li>Conducted extensive research, reviewing over 20 papers on virtual try-on using deep learning techniques.</li>
+                        <li>Pioneered the implementation of a comprehensive VITON pre-processing pipeline, including Dense-pose, Human-parse, pose-estimation, and Cloth-mask components.</li>
+                        <li>Contributed the pre-processing implementation to the official VITON GitHub repository, establishing it as a reference for the community.</li>
+                        <li>Trained the VITON-HR model on a proprietary dataset of over 100,000 images, achieving superior results compared to the original VITON-HR model.</li>
+                    </ul>
                 </div>
                 <div class="experience-card">
                     <h3>AI Intern</h3>
                     <h4>Takiacademy | 2022</h4>
-                    <p>Developed multilingual chatbot systems using advanced NLP techniques and containerized deployment, reducing inference time by 20%.</p>
+                    <ul>
+                        <li>Fine-tuned various neural network architectures (RNNs, LSTMs, GRUs) and transformers from Hugging Face for Arabic, English, and French language processing.</li>
+                        <li>Implemented a language classification model to automatically detect the language of input text.</li>
+                        <li>Created a Flask-based web service for the chatbot and containerized it using Docker, ensuring easy deployment and scalability.</li>
+                        <li>Optimized model performance and implemented efficient algorithms, reducing inference time by 20%.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -541,6 +598,29 @@
                 </div>
                 <div class="achievement-card">
                     <h3>Machine Learning Scientist with Python Certification - Datacamp</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="section-title">Blog & Articles</h2>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <h3>Introduction to MLOps</h3>
+                    <p>An in-depth look at the principles and practices of MLOps, including best practices for deploying and managing machine learning models in production.</p>
+                    <a href="link-to-article">Read More</a>
+                </div>
+                <div class="blog-card">
+                    <h3>Optimizing TensorFlow Models for Production</h3>
+                    <p>Tips and techniques for optimizing TensorFlow models to ensure they perform efficiently in production environments.</p>
+                    <a href="link-to-article">Read More</a>
+                </div>
+                <div class="blog-card">
+                    <h3>Containerizing AI Applications with Docker</h3>
+                    <p>A step-by-step guide to containerizing AI applications using Docker, ensuring consistency and portability across different environments.</p>
+                    <a href="link-to-article">Read More</a>
                 </div>
             </div>
         </div>
