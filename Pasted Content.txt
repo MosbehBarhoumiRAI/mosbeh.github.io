@@ -1,0 +1,65 @@
+MOSBEH BARHOUMI
++(216) 99 354 981 ⋄ Tunis, Tunisia
+mosbeh.barhoumi.ai@gmail.com ⋄ LinkedIn Profile
+SUMMARY
+Experienced MLOps Engineer with a strong background in Machine Learning, Deep Learning, and DevOps prac-
+tices. Skilled in developing and deploying scalable AI solutions, automating ML pipelines, and optimizing system
+performance. Adept at bridging the gap between data science and operations to deliver robust, production-ready
+AI systems.
+SKILLS
+MLOps & DevOpsCI/CD (Jenkins), Containerization (Docker, Kubernetes), Cloud Platforms (AWS),
+Monitoring & Logging
+Machine LearningDeep Learning, Computer Vision, NLP, TensorFlow, PyTorch, Scikit-learn, YOLO,
+Detectron2
+Data EngineeringData Processing, ETL Pipelines, Pandas, SQL
+Software EngineeringPython, Flask, RESTful APIs, Linux, Git
+Tools & PlatformsLabel Studio, Roboflow, Apache JMeter, Locust, k6, wrk
+PROFESSIONAL EXPERIENCE
+MLOps Engineer
+AVIDEA, Tunis
+Jul 2023 - Present
+• Implemented end-to-end MLOps pipelines for deploying automotive AI projects using Jenkins, with integrated
+unit testing for robust validation.
+• Developed a deep learning system for car part detection and damage assessment, achieving 95
+• Designed CI/CD pipeline with Jenkins, automating testing and deployment for faster release cycles.
+• Orchestrated containerized ML solutions using Docker and Docker Swarm for improved scalability.
+• Developed monitoring systems using ELK stack, reducing mean time to resolution for production issues.
+• Deployed high-performance RESTful APIs with Flask for seamless AI solution integration.
+• Fine-tuned and deployed 6+ OCR web services for diverse projects, integrating PaddleOCR, Tesseract, and
+SURYA OCR engines.
+• Enhanced complex OCR and unstructured data analysis using Gemini API and LLaMA Vision models for
+improved accuracy and insights.
+• Analyzed and detected fraud in car accident datasets using clustering algorithms and data engineering with
+LLM provider APIs.
+AI Research Intern
+IOVision, Tunis
+Feb 2023 - May 2023
+• Developed an efficient pre-processing pipeline for the VITON dataset, integrating human parsing, pose esti-
+mation, and cloth mask generation.• Implemented and optimized deep learning models using PyTorch and Detectron2, improving inference speed
+by 25%.
+• Designed a modular system architecture allowing easy integration with various datasets and models.
+• Created comprehensive documentation and managed version control, facilitating seamless knowledge transfer
+and collaboration.
+AI Intern
+Takiacademy, Tunis
+Jul 2022 - Oct 2022
+• Developed a multilingual chatbot using TensorFlow and NLP techniques, improving user query response
+accuracy by 35%.
+• Optimized model performance and implemented efficient algorithms, reducing inference time by 20%.
+• Collaborated in integrating the chatbot into the company’s platform, ensuring seamless functionality and
+user experience.
+EDUCATION
+Computer Science Engineering Degree (ENSI)
+National School for Computer Science, Tunisia2023
+Preparatory Institute for Engineering Studies
+Preparatory Institute for Engineering Nabeul, Tunisia2018 - 2020
+CERTIFICATIONS & ACHIEVEMENTS
+• Achieved top rankings (top 3) in more than 10 of the 50 data science competitions I participated in.
+• Certified Kubernetes Application Developer (CKAD) - KodeKloud
+• TensorFlow Developer Certification - Coursera
+• Professional Data Scientist and Data Analyst Certification - Datacamp
+• Machine Learning Scientist with Python Certification - Datacamp
+LANGUAGES
+Arabic (Native), French (Fluent), English (Fluent)
+ONLINE PROFILES
+GitHub — Medium — Zindi —
